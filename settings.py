@@ -2,17 +2,6 @@ from os import environ
 
 
 SESSION_CONFIGS = [
-    # dict(
-    #     name='public_goods',
-    #     app_sequence=['public_goods', 'payment_info'],
-    #     num_demo_participants=3,
-    # ),
-    # dict(
-    #     name='guess_two_thirds',
-    #     display_name="Guess 2/3 of the Average",
-    #     app_sequence=['guess_two_thirds', 'payment_info'],
-    #     num_demo_participants=3,
-    # ),
     dict(
         name='abcapp', 
         display_name="ABC Survey (Full App)",
@@ -30,45 +19,40 @@ SESSION_CONFIGS = [
     ),
     dict(
         name='postexperimental_questions', 
-        display_name="Post Experimental Questions",
+        display_name="Post Experimental Questions (sub app)",
         app_sequence=['postexperimental_questions', 'payment_info'], 
         num_demo_participants=1
     ),
     dict(
         name='narcissism_questionnaire', 
-        display_name="Narcissism Questionnaire",
+        display_name="Narcissism Questionnaire (sub app)",
         app_sequence=['narcissism_questionnaire', 'payment_info'], 
         num_demo_participants=1
     ),
     dict(
         name='risk_scale', 
-        display_name="Risk Scale",
+        display_name="Risk Scale (sub app)",
         app_sequence=['risk_scale', 'payment_info'], 
         num_demo_participants=1
     ),
     dict(
         name='behavioural_avoidance', 
-        display_name="Behavioural Avoidance",
+        display_name="Behavioural Avoidance (sub app)",
         app_sequence=['behavioural_avoidance', 'payment_info'], 
         num_demo_participants=1
     ),
     dict(
         name='entitlement_questionnaire', 
-        display_name="Entitlement Questionnaire",
+        display_name="Entitlement Questionnaire (sub app)",
         app_sequence=['entitlement_questionnaire', 'payment_info'], 
         num_demo_participants=1
     ),
     dict(
         name='demographic_questions', 
-        display_name="Demographic Questions",
+        display_name="Demographic Questions (sub app)",
         app_sequence=['demographic_questions', 'payment_info'], 
         num_demo_participants=1
     ),
-    # dict(
-    #     name='survey', 
-    #     app_sequence=['survey', 'payment_info'], 
-    #     num_demo_participants=1
-    # ),
 ]
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
 # in SESSION_CONFIGS, except those that explicitly override it.
