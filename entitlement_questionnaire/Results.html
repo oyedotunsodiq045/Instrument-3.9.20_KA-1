@@ -1,0 +1,37 @@
+{{ block title }}
+    <span hidden>[ENTITLEMENT QUESTIONNAIRE RESULTS]</span>
+{{ endblock }}
+
+{{ block content }}
+
+<header class="fs-4">
+    Entitlement Questionnaire Results
+</header>
+
+<table class="table">
+    <tr>
+        <td>Extraversion</td>
+        <td>{{ player.extraversion }} / 7</td>
+    </tr>
+    <tr>
+        <td>Agreeableness</td>
+        <td>{{ player.agreeableness }} / 7</td>
+    </tr>
+    <tr>
+        <td>Conscientiousness</td>
+        <td>{{ player.conscientiousness }} / 7</td>
+    </tr>
+    <tr>
+        <td>Neuroticism</td>
+        <td>{{ player.neuroticism }} / 7</td>
+    </tr>
+    <tr>
+        <td>Openness</td>
+        <td>{{ player.openness }} / 7</td>
+    </tr>
+</table>
+{{ next_button }}
+
+{{ endblock }}
+
+
