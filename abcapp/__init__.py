@@ -68,10 +68,17 @@ class Results(Page):
     pass
 
 
+# page_sequence = [
+#     ConsentForm,
+#     BackgroundInformation,
+#     IncentiveContract,
+#     EffortLevels,
+#     Results,
+# ]
+
 page_sequence = [
     ConsentForm,
     BackgroundInformation,
     IncentiveContract,
     EffortLevels,
-    Results,
 ]
