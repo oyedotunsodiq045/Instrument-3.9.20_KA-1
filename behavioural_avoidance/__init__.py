@@ -9,7 +9,7 @@ Please state your level of agreement with the following questions (Behavioral av
 
 class Constants(BaseConstants):
     name_in_url = 'behavioural_avoidance'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 1
 
 

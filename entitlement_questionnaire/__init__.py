@@ -9,7 +9,7 @@ Please respond to the following items using the number that best reflects your o
 
 class Constants(BaseConstants):
     name_in_url = 'entitlement_questionnaire'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 1
 
 

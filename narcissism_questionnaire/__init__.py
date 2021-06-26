@@ -9,7 +9,7 @@ Please answer the following questions about yourself. There are no right or wron
 
 class Constants(BaseConstants):
     name_in_url = 'narcissism_questionnaire'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 1
 
 

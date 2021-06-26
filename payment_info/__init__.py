@@ -10,7 +10,7 @@ Examples are given for the lab and Amazon Mechanical Turk (AMT).
 
 class Constants(BaseConstants):
     name_in_url = 'payment_info'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 1
 
 

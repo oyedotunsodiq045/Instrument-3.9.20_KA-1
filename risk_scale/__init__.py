@@ -9,7 +9,7 @@ Please indicate the extent to which you agree or disagree with the following sta
 
 class Constants(BaseConstants):
     name_in_url = 'risk_scale'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 1
 
 

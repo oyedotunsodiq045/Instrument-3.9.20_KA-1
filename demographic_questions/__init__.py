@@ -9,7 +9,7 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'demographic_questions'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 1
 
 

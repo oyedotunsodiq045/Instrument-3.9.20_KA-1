@@ -7,6 +7,7 @@ SESSION_CONFIGS = [
         display_name="ABC Survey (Full App)",
         app_sequence=[
             'abcapp', 
+            'mini_quiz', 
             'postexperimental_questions', 
             'narcissism_questionnaire', 
             'risk_scale', 
@@ -18,40 +19,46 @@ SESSION_CONFIGS = [
         num_demo_participants=3
     ),
     dict(
+        name='mini_quiz', 
+        display_name="Mini Quiz (sub app)",
+        app_sequence=['mini_quiz', 'payment_info'], 
+        num_demo_participants=3
+    ),
+    dict(
         name='postexperimental_questions', 
         display_name="Post Experimental Questions (sub app)",
         app_sequence=['postexperimental_questions', 'payment_info'], 
-        num_demo_participants=1
+        num_demo_participants=3
     ),
     dict(
         name='narcissism_questionnaire', 
         display_name="Narcissism Questionnaire (sub app)",
         app_sequence=['narcissism_questionnaire', 'payment_info'], 
-        num_demo_participants=1
+        num_demo_participants=3
     ),
     dict(
         name='risk_scale', 
         display_name="Risk Scale (sub app)",
         app_sequence=['risk_scale', 'payment_info'], 
-        num_demo_participants=1
+        num_demo_participants=3
     ),
     dict(
         name='behavioural_avoidance', 
         display_name="Behavioural Avoidance (sub app)",
         app_sequence=['behavioural_avoidance', 'payment_info'], 
-        num_demo_participants=1
+        num_demo_participants=3
     ),
     dict(
         name='entitlement_questionnaire', 
         display_name="Entitlement Questionnaire (sub app)",
         app_sequence=['entitlement_questionnaire', 'payment_info'], 
-        num_demo_participants=1
+        num_demo_participants=3
     ),
     dict(
         name='demographic_questions', 
         display_name="Demographic Questions (sub app)",
         app_sequence=['demographic_questions', 'payment_info'], 
-        num_demo_participants=1
+        num_demo_participants=3
     ),
 ]
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs

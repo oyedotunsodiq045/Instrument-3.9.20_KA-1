@@ -1,0 +1,73 @@
+{{ block title }}
+    Page title
+{{ endblock }}
+{{ block content }}
+
+    <ol>
+        <li>
+            <p>
+                In each round, a higher effort level is
+            </p>
+            {{ form.q1 }}
+        </li>
+        <br>
+
+        <li>
+            <p>
+                In each round, a higher effort level is
+            </p>
+            {{ form.q2 }}
+        </li>
+        <br>
+
+        <li>
+            <p>
+                For each round, I will be paid
+            </p>
+            {{ form.q3_bonus }}
+        </li>
+        <br>
+
+        <li>
+            <p>
+                For each round, I will be paid
+            </p>
+            {{ form.q3_penalty }}
+        </li>
+        <br>
+
+        <li>
+            <p>
+                For each round, I will be paid
+            </p>
+            {{ form.q3_bonus_penalty }}
+        </li>
+        <br>
+
+        <li>
+            <p>
+                For each round, without considering the monetary cost of effort, if I achieve a higher outcome level,
+            </p>
+            {{ form.q4_bonus }}
+        </li>
+        <br>
+
+        <li>
+            <p>
+                For each round, without considering the monetary cost of effort, if I achieve a higher outcome level,
+            </p>
+            {{ form.q5_penalty }}
+        </li>
+        <br>
+        
+        <li>
+            <p>
+                For each round, without considering the monetary cost of effort, if I achieve a higher outcome level,
+            </p>
+            {{ form.q6_bonus_penalty }}
+        </li>
+        <br>
+    </ol>
+    {{ next_button }}
+
+{{ endblock }}
