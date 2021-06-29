@@ -13,7 +13,7 @@ Before we begin, we would like to ask you some questions regarding your task and
 class Constants(BaseConstants):
     name_in_url = 'mini_quiz'
     players_per_group = 3
-    num_rounds = 10
+    num_rounds = 3
 
     endowment = cu(1000)
 
@@ -195,6 +195,10 @@ class BonusPage(Page):
     form_model = 'group'
     form_fields = ['quiz_1', 'quiz_2', 'quiz_3_bonus', 'quiz_4_bonus']
 
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 1
+
     # def before_next_page(self):
     #     """ 
     #         bonus_high_outcome   = 4/4
@@ -222,6 +226,10 @@ class PenaltyPage(Page):
     form_model = 'group'
     form_fields = ['quiz_1', 'quiz_2', 'quiz_3_penalty', 'quiz_4_penalty']
 
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 2
+
     # def before_next_page(self):
     #     """ 
     #         penalty_high_outcome   = 4/4
@@ -248,6 +256,10 @@ class PenaltyPage(Page):
 class BonusPenaltyPage(Page):
     form_model = 'group'
     form_fields = ['quiz_1', 'quiz_2', 'quiz_3_bonus_penalty', 'quiz_4_bonus_penalty']
+
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 3
 
     # def before_next_page(self):
     #     """ 
@@ -277,5 +289,5 @@ class Results(Page):
         pass
 
 
-page_sequence = [BonusPage, Results]
-# page_sequence = [BonusPage, PenaltyPage, BonusPenaltyPage, Results]
+# page_sequence = [BonusPage, Results]
+page_sequence = [BonusPage, PenaltyPage, BonusPenaltyPage, Results]
