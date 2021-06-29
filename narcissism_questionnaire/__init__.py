@@ -2,6 +2,8 @@ from otree.api import *
 
 c = Currency
 
+author = 'Sodiq Oyedotun'
+
 doc = """
 Please answer the following questions about yourself. There are no right or wrong answers.
 """

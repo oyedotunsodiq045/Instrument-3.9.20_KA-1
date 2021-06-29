@@ -2,6 +2,8 @@ from otree.api import *
 
 c = Currency
 
+author = 'Sodiq Oyedotun'
+
 doc = """
 Please state your level of agreement with the following questions (Behavioral avoidance /inhibition (BIS/BAS) scale)
 """

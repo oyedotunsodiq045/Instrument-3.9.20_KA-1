@@ -2,6 +2,8 @@ from otree.api import *
 
 c = Currency
 
+author = 'Sodiq Oyedotun'
+
 doc = """
 Your app description
 """

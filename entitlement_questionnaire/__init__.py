@@ -2,6 +2,8 @@ from otree.api import *
 
 c = Currency
 
+author = 'Sodiq Oyedotun'
+
 doc = """
 Please respond to the following items using the number that best reflects your own beliefs [ENTITLEMENT QUESTIONNAIRE].
 """

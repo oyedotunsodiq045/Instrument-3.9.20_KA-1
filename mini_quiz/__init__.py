@@ -3,6 +3,8 @@ import random
 
 c = Currency
 
+author = 'Sodiq Oyedotun'
+
 doc = """
 Before we begin, we would like to ask you some questions regarding your task and your incentive contract to make sure you understand the instructions.
 """

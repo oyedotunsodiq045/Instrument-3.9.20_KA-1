@@ -2,6 +2,8 @@ from otree.api import *
 
 c = Currency
 
+author = 'Sodiq Oyedotun'
+
 doc = """
 Please indicate the extent to which you agree or disagree with the following statements [RISK SCALE]
 """
