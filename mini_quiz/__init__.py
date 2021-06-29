@@ -12,7 +12,27 @@ class Constants(BaseConstants):
     name_in_url = 'mini_quiz'
     players_per_group = 3
     num_rounds = 10
+
     endowment = cu(1000)
+
+    # Bonus / no penalty
+    outcome = 0
+    bonus_base_salary = 1000
+    bonus_low_outcome = 0
+    bonus_medium_outcome = 1000
+    bonus_high_outcome = 2000
+
+    # No bonus / penalty
+    penalty_base_salary = 3000
+    penalty_low_outcome = -2000
+    penalty_medium_outcome = -1000
+    penalty_high_outcome = 0
+
+    # Bonus / penalty
+    bonus_penalty_base_salary = 2000
+    bonus_penalty_low_outcome = -1000
+    bonus_penalty_medium_outcome = 0
+    bonus_penalty_high_outcome = 1000
 
 
 class Subsession(BaseSubsession):
@@ -20,55 +40,26 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    pass
 
-
-class Player(BasePlayer):
 # Incentive Contract
     # Bonus / no penalty
-    outcome = models.IntegerField(initial=0)
-    bonus_base_salary = models.IntegerField(initial=1000)
-    bonus_low_outcome = models.IntegerField(initial=0)
-    bonus_medium_outcome = models.IntegerField(initial=1000)
-    bonus_high_outcome = models.IntegerField(initial=2000)
-    # outcome = 0
-    # bonus_base_salary = 1000
-    # bonus_low_outcome = 0
-    # bonus_medium_outcome = 1000
-    # bonus_high_outcome = 2000
-    # bonus_low_outcome = bonus_base_salary
-    # bonus_medium_outcome = bonus_base_salary + 1000
-    # bonus_high_outcome = bonus_base_salary + 2000
+    outcome = models.CurrencyField()
+    bonus_base_salary = models.CurrencyField()
+    bonus_low_outcome = models.CurrencyField()
+    bonus_medium_outcome = models.CurrencyField()
+    bonus_high_outcome = models.CurrencyField()
 
     # No bonus / penalty
-    penalty_base_salary = models.IntegerField(initial=3000)
-    penalty_low_outcome = models.IntegerField(initial=-2000)
-    penalty_medium_outcome = models.IntegerField(initial=-1000)
-    penalty_high_outcome = models.IntegerField(initial=0)
-    # penalty_base_salary = 3000
-    # penalty_low_outcome = -2000
-    # penalty_medium_outcome = -1000
-    # penalty_high_outcome = 0
-    # penalty_low_outcome = penalty_base_salary - 2000
-    # penalty_medium_outcome = penalty_base_salary - 1000
-    # penalty_high_outcome = penalty_base_salary
+    penalty_base_salary = models.CurrencyField()
+    penalty_low_outcome = models.CurrencyField()
+    penalty_medium_outcome = models.CurrencyField()
+    penalty_high_outcome = models.CurrencyField()
 
     # Bonus / penalty
-    bonus_penalty_base_salary = models.IntegerField(initial=2000)
-    bonus_penalty_low_outcome = models.IntegerField(initial=-1000)
-    bonus_penalty_medium_outcome = models.IntegerField(initial=0)
-    bonus_penalty_high_outcome = models.IntegerField(initial=1000)
-    # bonus_penalty_base_salary = 2000
-    # bonus_penalty_low_outcome = -1000
-    # bonus_penalty_medium_outcome = 0
-    # bonus_penalty_high_outcome = 1000
-    # bonus_penalty_low_outcome = bonus_penalty_base_salary - 1000
-    # bonus_penalty_medium_outcome = bonus_penalty_base_salary
-    # bonus_penalty_high_outcome = bonus_penalty_base_salary + 1000
-
-
-# Effort Levels
-
+    bonus_penalty_base_salary = models.CurrencyField()
+    bonus_penalty_low_outcome = models.CurrencyField()
+    bonus_penalty_medium_outcome = models.CurrencyField()
+    bonus_penalty_high_outcome = models.CurrencyField()
 
 # Mini Quiz questions
     # quiz_1_answer = 'associated with a higher monetary cost to me.'
@@ -134,32 +125,72 @@ class Player(BasePlayer):
         label="4) For each round, without considering the monetary cost of effort, if I achieve a higher outcome level,",
         widget=widgets.RadioSelect
     )
-    
+
+
+class Player(BasePlayer):
+# Incentive Contract
+    # Bonus / no penalty
+    outcome = models.CurrencyField()
+    bonus_base_salary = models.CurrencyField()
+    bonus_low_outcome = models.CurrencyField()
+    bonus_medium_outcome = models.CurrencyField()
+    bonus_high_outcome = models.CurrencyField()
+    # outcome = models.IntegerField(initial=0)
+    # bonus_base_salary = models.IntegerField(initial=1000)
+    # bonus_low_outcome = models.IntegerField(initial=0)
+    # bonus_medium_outcome = models.IntegerField(initial=1000)
+    # bonus_high_outcome = models.IntegerField(initial=2000)
+    # outcome = 0
+    # bonus_base_salary = 1000
+    # bonus_low_outcome = 0
+    # bonus_medium_outcome = 1000
+    # bonus_high_outcome = 2000
+    # bonus_low_outcome = bonus_base_salary
+    # bonus_medium_outcome = bonus_base_salary + 1000
+    # bonus_high_outcome = bonus_base_salary + 2000
+
+    # No bonus / penalty
+    penalty_base_salary = models.CurrencyField()
+    penalty_low_outcome = models.CurrencyField()
+    penalty_medium_outcome = models.CurrencyField()
+    penalty_high_outcome = models.CurrencyField()
+    # penalty_base_salary = models.IntegerField(initial=3000)
+    # penalty_low_outcome = models.IntegerField(initial=-2000)
+    # penalty_medium_outcome = models.IntegerField(initial=-1000)
+    # penalty_high_outcome = models.IntegerField(initial=0)
+    # penalty_base_salary = 3000
+    # penalty_low_outcome = -2000
+    # penalty_medium_outcome = -1000
+    # penalty_high_outcome = 0
+    # penalty_low_outcome = penalty_base_salary - 2000
+    # penalty_medium_outcome = penalty_base_salary - 1000
+    # penalty_high_outcome = penalty_base_salary
+
+    # Bonus / penalty
+    bonus_penalty_base_salary = models.CurrencyField()
+    bonus_penalty_low_outcome = models.CurrencyField()
+    bonus_penalty_medium_outcome = models.CurrencyField()
+    bonus_penalty_high_outcome = models.CurrencyField()
+    # bonus_penalty_base_salary = models.IntegerField(initial=2000)
+    # bonus_penalty_low_outcome = models.IntegerField(initial=-1000)
+    # bonus_penalty_medium_outcome = models.IntegerField(initial=0)
+    # bonus_penalty_high_outcome = models.IntegerField(initial=1000)
+    # bonus_penalty_base_salary = 2000
+    # bonus_penalty_low_outcome = -1000
+    # bonus_penalty_medium_outcome = 0
+    # bonus_penalty_high_outcome = 1000
+    # bonus_penalty_low_outcome = bonus_penalty_base_salary - 1000
+    # bonus_penalty_medium_outcome = bonus_penalty_base_salary
+    # bonus_penalty_high_outcome = bonus_penalty_base_salary + 1000
+
+
+# Effort Levels
+
 
 # PAGES
 class BonusPage(Page):
-    # def vars_for_template(self):
-    #     player_id = self.player.id_in_group
 
-    #     p1_id = None
-    #     p2_id = None
-    #     p3_id = None
-
-    #     if player_id == 1:
-    #         p1_id = True
-    #     elif player_id == 2:
-    #         p2_id = True
-    #     elif player_id == 3:
-    #         p3_id = True
-       
-               
-    #     return dict(
-    #        p1_id = p1_id,
-    #        p2_id = p2_id,
-    #        p3_id = p3_id
-    #     ) 
-
-    form_model = 'player'
+    form_model = 'group'
     form_fields = ['quiz_1', 'quiz_2', 'quiz_3_bonus', 'quiz_4_bonus']
 
     # def before_next_page(self):
@@ -186,7 +217,7 @@ class BonusPage(Page):
 
 
 class PenaltyPage(Page):
-    form_model = 'player'
+    form_model = 'group'
     form_fields = ['quiz_1', 'quiz_2', 'quiz_3_penalty', 'quiz_4_penalty']
 
     # def before_next_page(self):
@@ -213,7 +244,7 @@ class PenaltyPage(Page):
 
 
 class BonusPenaltyPage(Page):
-    form_model = 'player'
+    form_model = 'group'
     form_fields = ['quiz_1', 'quiz_2', 'quiz_3_bonus_penalty', 'quiz_4_bonus_penalty']
 
     # def before_next_page(self):

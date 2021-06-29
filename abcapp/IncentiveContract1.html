@@ -1,0 +1,49 @@
+{{ block title }}<span hidden>[Contract]</span>{{ endblock }}
+{{ block content }}
+
+<div class="header">
+    <header class="pb-3 mb-4 border-bottom">
+        <span class="fs-4">Your Incentive Contract</span>
+    </header>
+
+    <!-- https://www.geeksforgeeks.org/how-to-insert-spaces-tabs-in-text-using-html-css/ -->
+    <!-- Regular space: &nbsp;
+    Two spaces gap: &ensp;
+    Four spaces gap: &emsp; -->
+    <!-- Incentive Contract 1 -->
+    <div class="first-paragraph mb-4">
+        <p class="card-text">
+            <!-- 1 &emsp;<span class="fw-bold"> Bonus / no penalty</span> -->
+            <!-- 1 &emsp;<span class=""> Bonus / no penalty</span> -->
+            Bonus / no penalty</span>
+        </p>
+    </div>
+    
+    <div class="second-paragraph mb-4">
+        <span>Each round, ABC Company will pay you:</span>
+        <ul style="list-style-type: none; margin-left: 15px; padding: 0;">
+            <li>1) &emsp;a base salary of 1,000 Lira, and</li>
+            <br>
+            <li>2a) &ensp;<u>no bonus if you achieve a low outcome,</u></li>
+            <li>2b) &ensp;<u>a bonus of 1,000 Lira if you achieve a medium outcome, OR</u></li>
+            <li>2c) &ensp;<u>a bonus of 2,000 Lira if you achieve a high outcome.</u></li>
+        </ul>
+    </div>
+
+    <div class="third-paragraph mb-4">
+        <p>
+            Thus, if you achieve a high outcome, you will be compensated a total of 3,000 Lira (1,000 Lira base salary plus 2,000 Lira bonus). If you achieve a medium outcome you will be compensated a total of 2,000 Lira (1,000 Lira base salary plus 1,000 Lira bonus). If you achieve a low outcome, you will be compensated a total of 1,000 Lira (base salary only).
+        </p>
+    </div>
+
+    <div class="final-paragraph">
+        <p>
+            You will be informed whether you achieved a high, medium, or low outcome at the end of each round.
+        </p>
+    </div>
+</div>
+
+
+    {{ next_button }}
+
+{{ endblock }}

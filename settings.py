@@ -7,7 +7,7 @@ SESSION_CONFIGS = [
         display_name="ABC Survey (Full App)",
         app_sequence=[
             'abcapp', 
-            'mini_quiz', 
+            # 'mini_quiz', 
             'postexperimental_questions', 
             'narcissism_questionnaire', 
             'risk_scale', 
@@ -18,12 +18,12 @@ SESSION_CONFIGS = [
         ], 
         num_demo_participants=3
     ),
-    dict(
-        name='mini_quiz', 
-        display_name="Mini Quiz (sub app)",
-        app_sequence=['mini_quiz', 'payment_info'], 
-        num_demo_participants=3
-    ),
+    # dict(
+    #     name='mini_quiz', 
+    #     display_name="Mini Quiz (sub app)",
+    #     app_sequence=['mini_quiz', 'payment_info'], 
+    #     num_demo_participants=3
+    # ),
     dict(
         name='postexperimental_questions', 
         display_name="Post Experimental Questions (sub app)",

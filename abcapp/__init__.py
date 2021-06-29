@@ -52,12 +52,40 @@ class BackgroundInformation(Page):
     pass
 
 
-class IncentiveContract(Page):
-    pass
+class IncentiveContract1(Page):
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 1
 
 
-class EffortLevels(Page):
-    pass
+class IncentiveContract2(Page):
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 2
+
+
+class IncentiveContract3(Page):
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 3
+
+
+class EffortLevels1(Page):
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 1
+
+
+class EffortLevels2(Page):
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 2
+
+
+class EffortLevels3(Page):
+    @staticmethod
+    def is_displayed(player):
+        return player.id_in_group == 3
 
 
 class ResultsWaitPage(WaitPage):
@@ -68,17 +96,13 @@ class Results(Page):
     pass
 
 
-# page_sequence = [
-#     ConsentForm,
-#     BackgroundInformation,
-#     IncentiveContract,
-#     EffortLevels,
-#     Results,
-# ]
-
 page_sequence = [
     ConsentForm,
     BackgroundInformation,
-    IncentiveContract,
-    EffortLevels,
+    IncentiveContract1,
+    IncentiveContract2,
+    IncentiveContract3,
+    EffortLevels1,
+    EffortLevels2,
+    EffortLevels3,
 ]
